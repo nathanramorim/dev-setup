@@ -1,0 +1,12 @@
+{
+  "project": "dev-setup",
+  "version": "2.2.0-beta",
+  "agents": ["claude", "gemini"],
+  "telemetry": {
+    "enabled": true,
+    "anonymous": true,
+    "endpoint": "local"
+  },
+  "lang": "pt-BR",
+  "naming_convention": "hash"
+}

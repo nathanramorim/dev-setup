@@ -1,0 +1,7 @@
+# Exemplo — Design System
+
+> Renomeie este arquivo para `design-system.md` (ou o nome que fizer sentido) e edite o conteúdo. Arquivos `.example` não são lidos pelos agentes — só arquivos `.md` reais dentro de `.agent/rules/`.
+
+- Componentes de UI seguem a biblioteca `<nome-da-lib>` — não criar componente novo sem checar se já existe equivalente.
+- Cores e espaçamento vêm de tokens (`<caminho-dos-tokens>`), nunca valores literais hardcoded.
+- Todo componente novo com interação (botão, link, campo) precisa de estado de foco visível e rótulo acessível (`aria-label` ou texto visível).

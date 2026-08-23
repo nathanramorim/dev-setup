@@ -1,0 +1,18 @@
+{
+  "$schema": "forge-sdd/metrics/1.0",
+  "feature": "string",
+  "phase": "integer",
+  "agent_path": ["orquestrador", "builder", "revisor"],
+  "tokens_input": "integer",
+  "tokens_output": "integer",
+  "turns": "integer",
+  "duration_seconds": "integer",
+  "criterio_atendido": "boolean",
+  "model": "string",
+  "rework_lines": "integer",
+  "context7_calls": "integer",
+  "git_calls": "integer",
+  "files_touched": ["string"],
+  "outcome": "approved | rejected | blocked",
+  "sdd_version": "string"
+}
