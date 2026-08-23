@@ -24,9 +24,9 @@ Um CLI em shell script (bash/zsh), versionado neste repositório, que:
 ## Escopo
 
 **Dentro do escopo:**
-- Instalação via Homebrew (formulae e casks) para: Node.js, .NET SDK, GitHub CLI, Claude Code CLI, VS Code, DBeaver, Bruno, iTerm2.
+- Instalação via Homebrew (formulae e casks) para: Node.js (via `nvm`), .NET SDK, GitHub CLI, Claude Code CLI, VS Code, DBeaver, Bruno, iTerm2, `pnpm`, `oh-my-zsh`.
 - Instalação/bootstrap do `uv` para gestão de Python.
-- Restauração de configuração de zsh (dotfiles) versionada no repo.
+- Restauração de configuração de zsh (dotfiles) versionada no repo, importada dos arquivos reais do usuário (`.zshrc`, `.p10k.zsh`).
 - Seleção interativa do que instalar (menu, não "tudo ou nada").
 - Detecção de SO/arquitetura antes de instalar.
 - Banner de abertura do CLI com identidade do autor: `nathanramorim`, LinkedIn (`linkedin.com/in/nathanramorim`) e Instagram (`instagram.com/nathanramorim`).
@@ -50,5 +50,5 @@ Um CLI em shell script (bash/zsh), versionado neste repositório, que:
 ## Perguntas em aberto — respondidas em 2026-08-23
 1. ~~"Antigravity CLI" — qual é o pacote/instalador exato?~~ **Resolvido:** instalador oficial via `curl -fsSL https://antigravity.google/cli/install.sh | bash`.
 2. ~~Node.js: Homebrew direto ou version manager?~~ **Resolvido:** via `nvm`. O instalador deve, além de instalar o `nvm`, ensinar o uso básico (help/onboarding no output do CLI).
-3. ~~Dotfiles de zsh já existem em algum lugar?~~ **Resolvido:** criar do zero nesta iniciativa (não há dotfiles pré-existentes a importar).
+3. ~~Dotfiles de zsh já existem em algum lugar?~~ **Atualizado em 2026-08-23:** existem, sim — `~/.zshrc` e `~/.p10k.zsh` reais foram levantados na máquina atual e serão importados/adaptados (ver `feat-83bb-05-dotfiles-zsh.md`), em vez de criados do zero. Ajustes: `nvs` → `nvm`, oh-my-zsh instalado de fato (hoje referenciado mas ausente), paths do Homebrew tornados portáveis (`brew --prefix`), `pnpm` mantido, Rancher Desktop fora do escopo.
 4. Confirmar se o VCS/work item system permanece `github` (conforme `constitution.md`) para abertura de PRs das features. **Segue aberto** — assumir `github` (valor atual da constitution) salvo indicação contrária.

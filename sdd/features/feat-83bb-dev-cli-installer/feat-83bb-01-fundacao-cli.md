@@ -3,7 +3,7 @@
 **Branch:** `feat/83bb-dev-cli-installer` (branch única para toda a feature `83bb`, conforme regra 7 da constitution)
 **Fase:** 0
 **Depende de:** —
-**Status:** `todo`
+**Status:** `done`
 
 ## Objetivo
 Criar a estrutura base do CLI de reinstalação do ambiente de dev: entry point, detecção de SO/arquitetura, bootstrap do Homebrew e o contrato padrão que todo instalador vai seguir.

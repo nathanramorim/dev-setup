@@ -3,7 +3,7 @@
 **Branch:** `feat/83bb-dev-cli-installer`
 **Fase:** 2
 **Depende de:** `feat-83bb-02-motor-menu`
-**Status:** `todo`
+**Status:** `done`
 
 ## Objetivo
 Implementar os instaladores idempotentes das ferramentas "core" do dia a dia: Node.js (via `nvm`), .NET SDK, GitHub CLI, VS Code, DBeaver, Bruno, iTerm2 e `uv` (Python).

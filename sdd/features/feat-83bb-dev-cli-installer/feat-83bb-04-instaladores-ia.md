@@ -3,7 +3,7 @@
 **Branch:** `feat/83bb-dev-cli-installer`
 **Fase:** 2
 **Depende de:** `feat-83bb-02-motor-menu`
-**Status:** `todo`
+**Status:** `done`
 
 ## Objetivo
 Implementar os instaladores idempotentes das CLIs de IA usadas no dia a dia: Claude Code CLI e Antigravity CLI.

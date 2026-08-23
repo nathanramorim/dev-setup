@@ -3,7 +3,7 @@
 **Branch:** `feat/83bb-dev-cli-installer`
 **Fase:** 4
 **Depende de:** `feat-83bb-03-instaladores-core`, `feat-83bb-04-instaladores-ia`, `feat-83bb-05-dotfiles-zsh`
-**Status:** `todo`
+**Status:** `done`
 
 ## Objetivo
 Garantir idempotência ponta a ponta de todos os instaladores e documentar o uso do CLI para o próprio usuário retomar o projeto após uma formatação futura.
