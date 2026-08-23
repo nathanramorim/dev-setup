@@ -77,7 +77,9 @@ C4Container
 | API/E2E | Bruno | Homebrew cask `bruno` | — |
 | Terminal | iTerm2 | Homebrew cask `iterm2` | — |
 | Python | uv | Homebrew formula `uv` (ou script oficial `astral.sh`) | Preferência explícita do usuário sobre pip/venv/conda |
-| Shell | zsh completo | dotfiles versionados + symlink/copy | Dotfiles criados do zero nesta iniciativa (sem origem pré-existente a importar) |
+| Shell | zsh completo | dotfiles versionados (importados de `~/.zshrc`/`~/.p10k.zsh` reais) + symlink | Ver `feat-83bb-05-dotfiles-zsh.md` para lista de ajustes de portabilidade |
+| Shell | oh-my-zsh | Instalador oficial | Hoje referenciado no `.zshrc` mas não instalado de fato — corrigido nesta iniciativa |
+| Node (pacotes) | pnpm | Instalador oficial / Homebrew | Mantido por já estar em uso, mesmo fora da lista original |
 | Base | Homebrew | Script oficial `brew.sh` | Bootstrap se ausente |
 
 ## Critérios de aceitação executáveis

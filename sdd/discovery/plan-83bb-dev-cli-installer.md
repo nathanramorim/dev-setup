@@ -22,7 +22,8 @@
 - Claude Code CLI e Antigravity CLI (canal de instalação a confirmar antes de iniciar).
 
 ### Fase 3 — Configuração de zsh
-- Dotfiles versionados (`.zshrc`, aliases, tema, plugins).
+- Dotfiles versionados, importados dos arquivos reais do usuário (`.zshrc`, `.p10k.zsh`), com paths tornados portáveis e `nvs` trocado por `nvm`.
+- Instalador de `oh-my-zsh` (hoje referenciado mas ausente) e de `pnpm`.
 - Aplicação via symlink + backup automático do que já existir na máquina.
 
 ### Fase 4 — Robustez e documentação
