@@ -3,7 +3,7 @@
 **Branch:** `feat/83bb-dev-cli-installer`
 **Fase:** 3
 **Depende de:** `feat-83bb-01-fundacao-cli`
-**Status:** `todo`
+**Status:** `done`
 
 ## Objetivo
 Versionar a configuração real de zsh do usuário (importada de `~/.zshrc` e `~/.p10k.zsh`), adaptada para ser portável (paths via `brew --prefix` em vez de hardcoded) e alinhada às decisões do discovery (nvm no lugar de nvs, oh-my-zsh instalado de fato), e implementar a restauração via CLI com backup automático.

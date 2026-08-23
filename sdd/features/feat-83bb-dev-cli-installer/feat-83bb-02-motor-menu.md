@@ -3,7 +3,7 @@
 **Branch:** `feat/83bb-dev-cli-installer`
 **Fase:** 1
 **Depende de:** `feat-83bb-01-fundacao-cli`
-**Status:** `todo`
+**Status:** `done`
 
 ## Objetivo
 Implementar o motor do CLI: parsing de flags, menu interativo de seleção por categoria, orquestração dos instaladores selecionados e o banner de branding do autor.
