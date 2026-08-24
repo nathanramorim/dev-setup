@@ -18,7 +18,7 @@ Feature 83bb — dev-cli-installer  [x] done
 | feat-83bb-06-hardening-docs | feat/83bb-dev-cli-installer | done |
 
 ## Próximo passo
-**Iniciar:** revisão/merge da branch `feat/83bb-dev-cli-installer` em `main` (abrir PR), depois retomar `feat-00-foundation` se ainda fizer sentido.
+**Iniciar:** revisar/mergear `fix/faa0-selecao-nao-funciona` (menu com navegação por setas) e `feat/83bb-dev-cli-installer` em `main` (abrir PRs), depois retomar `feat-00-foundation` se ainda fizer sentido.
 **Bloqueios:** —
 
 ## Handoff da última sessão
