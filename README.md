@@ -1,6 +1,16 @@
+<p align="center">
+  <img src="docs/banner.svg" alt="dev-setup — CLI para reinstalar seu ambiente de dev sem sofrimento" width="100%">
+</p>
+
 # dev-setup
 
-CLI em shell script (bash, compatível com o bash 3.2 do macOS) para reinstalar e configurar o ambiente de desenvolvimento após formatar o Mac — sem precisar lembrar manualmente de cada ferramenta.
+## O que é isso? (em bom português)
+
+Formatei meu Mac. Aí veio a pergunta de sempre: "e agora, vou instalar tudo de novo, um por um?" Node, VS Code, GitHub CLI, dbeaver, configurar o zsh bonitinho de novo... só de pensar deu preguiça.
+
+Então fiz esse CLI. Ele te pergunta o que você quer instalar (ou instala tudo de uma vez, se preferir) e cuida do resto sozinho — sem você precisar lembrar o nome de cada ferramenta ou o comando de instalação de cada uma.
+
+Não precisa entender de programação para usar: é só rodar um comando no Terminal e escolher nas setinhas o que você quer. Se você é dev (ou tá virando um), isso aqui resolve o básico pra você já sair feliz e produtivo no seu Mac novo/formatado.
 
 ## Uso
 
@@ -58,3 +68,9 @@ dotfiles/               .zshrc, .p10k.zsh e aliases versionados
 ## Compatibilidade
 
 Testado no bash 3.2 (padrão de fábrica do macOS) e macOS arm64 (Apple Silicon). Os paths do Homebrew são resolvidos dinamicamente (`/opt/homebrew` em arm64, `/usr/local` em Intel).
+
+## Sugestões e contato
+
+Tem uma ideia, achou um bug ou quer sugerir uma ferramenta nova? Abre uma [issue](../../issues) aqui no repo.
+
+Também dá pra me encontrar no LinkedIn — tem um resumo rápido de quem eu sou aqui: https://tremdelinks.vercel.app/nathan-amorim

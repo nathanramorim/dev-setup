@@ -18,8 +18,11 @@ Feature 83bb — dev-cli-installer  [x] done
 | feat-83bb-06-hardening-docs | feat/83bb-dev-cli-installer | done |
 
 ## Próximo passo
-**Iniciar:** revisar/mergear `fix/faa0-selecao-nao-funciona` (menu com navegação por setas) e `feat/83bb-dev-cli-installer` em `main` (abrir PRs), depois retomar `feat-00-foundation` se ainda fizer sentido.
+**Iniciar:** revisar/mergear `feat/801a-readme-leigos-imagem` em `main` (PR #3).
 **Bloqueios:** —
+
+## Handoff extra
+- `feat/83bb-dev-cli-installer` (PR #1), `fix/faa0-selecao-nao-funciona` (PR #2, menu navegável por setas) e o PR #4 (trouxe o fix pendente para `main`) já foram mergeados.
 
 ## Handoff da última sessão
 - CLI `dev-setup` implementado por completo (setup.sh, lib/, installers/, dotfiles/, README.md) na branch `feat/83bb-dev-cli-installer`, compatível com bash 3.2 (padrão do macOS).
