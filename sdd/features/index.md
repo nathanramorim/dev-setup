@@ -26,3 +26,4 @@ main
 | 83bb-04 | feat-83bb-dev-cli-installer/feat-83bb-04-instaladores-ia.md | feat/83bb-dev-cli-installer | 2 | done |
 | 83bb-05 | feat-83bb-dev-cli-installer/feat-83bb-05-dotfiles-zsh.md | feat/83bb-dev-cli-installer | 3 | done |
 | 83bb-06 | feat-83bb-dev-cli-installer/feat-83bb-06-hardening-docs.md | feat/83bb-dev-cli-installer | 4 | done |
+| fix-faa0 | fix-faa0-selecao-nao-funciona.md | fix/faa0-selecao-nao-funciona | — | done |
