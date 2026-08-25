@@ -40,6 +40,11 @@ print_banner
 echo "SO: $(os_name) | Arquitetura: $(os_arch) | Homebrew: $(brew_prefix)"
 echo
 
+if [[ "$DRY_RUN" == "true" ]]; then
+  echo "[dry-run] nenhuma alteração será realizada."
+  echo
+fi
+
 if [[ "$DOTFILES" == "true" ]]; then
   apply_dotfiles
   exit 0

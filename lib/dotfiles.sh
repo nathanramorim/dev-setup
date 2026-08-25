@@ -5,14 +5,25 @@ _dotfiles_backup_and_link() {
   local src="$1" dest="$2"
   local timestamp
   timestamp="$(date +%Y%m%d%H%M%S)"
+  local dry="${DRY_RUN:-false}"
 
   if [[ -e "$dest" || -L "$dest" ]]; then
     if [[ -L "$dest" && "$(readlink "$dest")" == "$src" ]]; then
       echo "[ok] $dest já aponta para $src"
       return 0
     fi
-    mv "$dest" "$dest.bak.$timestamp"
-    echo "[backup] $dest -> $dest.bak.$timestamp"
+
+    if [[ "$dry" == "true" ]]; then
+      echo "[dry-run] backup: $dest -> $dest.bak.$timestamp"
+    else
+      mv "$dest" "$dest.bak.$timestamp"
+      echo "[backup] $dest -> $dest.bak.$timestamp"
+    fi
+  fi
+
+  if [[ "$dry" == "true" ]]; then
+    echo "[dry-run] link: $dest -> $src"
+    return 0
   fi
 
   ln -s "$src" "$dest"
