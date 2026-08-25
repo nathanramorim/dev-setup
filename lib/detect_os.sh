@@ -29,6 +29,12 @@ ensure_homebrew() {
   if command -v brew >/dev/null 2>&1; then
     return 0
   fi
+
+  if [[ "${DRY_RUN:-false}" == "true" ]]; then
+    echo "[dry-run] instalaria: Homebrew"
+    return 0
+  fi
+
   echo "Homebrew não encontrado — instalando..."
   NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   eval "$($(brew_prefix)/bin/brew shellenv)"
