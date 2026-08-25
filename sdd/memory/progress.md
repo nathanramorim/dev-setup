@@ -18,12 +18,12 @@ Feature 83bb — dev-cli-installer  [x] done
 | feat-83bb-06-hardening-docs | feat/83bb-dev-cli-installer | done |
 
 ## Próximo passo
-**Iniciar:** revisar/mergear `claude/dry-run-mode-fix-9v8dlq` (fix: `--dry-run` executava efeitos reais em `ensure_homebrew` e `apply_dotfiles`).
+**Iniciar:** revisar/mergear `fix/6b3f-node-install-incompleto` (fix: instalador `node` só instalava o `nvm`, sem Node/npm de fato).
 **Bloqueios:** —
 
 ## Handoff extra
-- `feat/83bb-dev-cli-installer` (PR #1), `fix/faa0-selecao-nao-funciona` (PR #2, menu navegável por setas) e o PR #4 (trouxe o fix pendente para `main`) já foram mergeados.
-- `claude/dry-run-mode-fix-9v8dlq`: `--dry-run` agora gateia `ensure_homebrew` (lib/detect_os.sh) e `_dotfiles_backup_and_link` (lib/dotfiles.sh) — nenhum efeito colateral real (curl/brew/mv/ln) ocorre em modo simulação. Suíte de testes nova em `tests/` (bash puro, sem framework externo — projeto não tinha testes antes).
+- `feat/83bb-dev-cli-installer` (PR #1), `fix/faa0-selecao-nao-funciona` (PR #2, menu navegável por setas), PR #4 (fix pendente para `main`) e `claude/dry-run-mode-fix-9v8dlq` (PR #8, `--dry-run` sem efeitos reais) já foram mergeados.
+- `fix/6b3f-node-install-incompleto`: `installers/node.sh` agora roda `nvm install --lts` + `nvm alias default 'lts/*'` de fato (antes só instalava o `nvm` e imprimia instruções). Novo helper `load_default_node` (lib/common.sh) carrega o Node "default" do nvm em qualquer installer — necessário porque cada `installers/*.sh` roda em subprocesso isolado (lib/registry.sh), então `claude_code.sh` precisa carregar o ambiente por conta própria em vez de depender de PATH herdado. `check()` de `node.sh` agora valida a cadeia completa (nvm+node+npm), não só a existência do `nvm.sh`. Testado com instalação real (rede) além dos mocks em `tests/test_node_install.sh`.
 
 ## Handoff da última sessão
 - CLI `dev-setup` implementado por completo (setup.sh, lib/, installers/, dotfiles/, README.md) na branch `feat/83bb-dev-cli-installer`, compatível com bash 3.2 (padrão do macOS).
