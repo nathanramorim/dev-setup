@@ -47,6 +47,16 @@ assert_true() {
   fi
 }
 
+assert_false() {
+  local exit_code="$1" name="$2"
+  if [[ "$exit_code" != "0" ]]; then
+    _test_report ok "$name"
+  else
+    _test_report fail "$name"
+    echo "       exit code esperado != 0, obtido $exit_code"
+  fi
+}
+
 assert_file_absent() {
   local path="$1" name="$2"
   if [[ ! -e "$path" ]]; then

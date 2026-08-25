@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Node.js via nvm (Node Version Manager).
+# Node.js via nvm (Node Version Manager): instala a LTS mais recente e a define
+# como alias "default", para que node/npm fiquem disponíveis em novos shells.
 set -euo pipefail
 SCRIPT_DIR="${SCRIPT_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 source "$SCRIPT_DIR/lib/common.sh"
@@ -7,18 +8,30 @@ source "$SCRIPT_DIR/lib/common.sh"
 export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
 
 check() {
-  [[ -s "$NVM_DIR/nvm.sh" ]]
+  load_default_node
 }
 
 install() {
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+  if [[ ! -s "$NVM_DIR/nvm.sh" ]]; then
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+  fi
+
+  set +eu
   # shellcheck disable=SC1091
   source "$NVM_DIR/nvm.sh"
+  nvm install --lts
+  nvm alias default 'lts/*'
+  set -eu
+
+  if ! load_default_node; then
+    echo "falha ao ativar Node/npm via nvm após a instalação." >&2
+    return 1
+  fi
+
   echo
-  echo "nvm instalado. Uso básico:"
-  echo "  nvm install --lts   # instala a versão LTS mais recente do Node"
-  echo "  nvm use --lts       # usa a versão LTS na sessão atual"
-  echo "  nvm alias default lts/*   # define a LTS como padrão em novos shells"
+  echo "Node.js $(node --version) (LTS) instalado via nvm e definido como 'default'."
+  echo "npm $(npm --version) disponível."
+  echo "Novos terminais já terão node/npm no PATH (via nvm.sh no seu shell rc)."
 }
 
 case "${1:-}" in

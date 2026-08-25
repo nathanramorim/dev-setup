@@ -29,7 +29,7 @@ Não precisa entender de programação para usar: é só rodar um comando no Ter
 
 | id | Ferramenta |
 |---|---|
-| `node` | Node.js via `nvm` |
+| `node` | Node.js (LTS) via `nvm`, definido como alias `default` |
 | `dotnet` | .NET SDK |
 | `gh` | GitHub CLI |
 | `vscode` | VS Code |
