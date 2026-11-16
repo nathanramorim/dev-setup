@@ -4,6 +4,12 @@
 
 # dev-setup
 
+<p align="center">
+  <a href="https://github.com/nathanramorim/dev-setup/releases"><img alt="versão" src="https://img.shields.io/github/v/tag/nathanramorim/dev-setup?label=vers%C3%A3o&color=2563eb"></a>
+  <img alt="macOS" src="https://img.shields.io/badge/macOS-arm64%20%2F%20Intel-16a34a">
+</p>
+
+
 ## O que é isso? (em bom português)
 
 Formatei meu Mac. Aí veio a pergunta de sempre: "e agora, vou instalar tudo de novo, um por um?" Node, VS Code, GitHub CLI, dbeaver, configurar o zsh bonitinho de novo... só de pensar deu preguiça.
@@ -64,6 +70,13 @@ dotfiles/               .zshrc, .p10k.zsh e aliases versionados
 1. Crie `installers/<id>.sh` seguindo o contrato dos demais (`check` retorna 0 se já instalado; `install` instala de forma idempotente).
 2. Adicione `<id>` em `TOOL_IDS` e a descrição correspondente em `TOOL_DESCS`, em `lib/registry.sh` (arrays paralelos — o projeto evita `declare -A` para manter compatibilidade com o bash 3.2 do macOS).
 3. `chmod +x installers/<id>.sh`.
+
+
+## Versões
+
+| Versão | Novidades |
+|---|---|
+| 0.1.0 | Primeira versão: menu interativo e instaladores idempotentes para o essencial de um Mac novo. |
 
 ## Compatibilidade
 
